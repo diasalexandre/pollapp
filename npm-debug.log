@@ -1,0 +1,66 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install', 'bdb' ]
+2 info using npm@1.3.5
+3 info using node@v0.10.15
+4 warn package.json pollapp-webservice@1.0.0 No README data
+5 warn package.json datejs@0.0.2 'repositories' (plural) Not supported.
+5 warn package.json Please pick one as the 'repository' field
+6 warn package.json hiredis@0.1.15 No repository field.
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'bdb', null ]
+9 verbose cache add name=undefined spec="bdb" args=["bdb",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'bdb',
+10 verbose parsed url   path: 'bdb',
+10 verbose parsed url   href: 'bdb' }
+11 silly lockFile 36f12659-bdb bdb
+12 verbose lock bdb /home/borussia/.npm/36f12659-bdb.lock
+13 silly lockFile 36f12659-bdb bdb
+14 silly lockFile 36f12659-bdb bdb
+15 verbose addNamed [ 'bdb', '' ]
+16 verbose addNamed [ null, '*' ]
+17 silly lockFile f9767e37-bdb bdb@
+18 verbose lock bdb@ /home/borussia/.npm/f9767e37-bdb.lock
+19 silly addNameRange { name: 'bdb', range: '*', hasData: false }
+20 verbose url raw bdb
+21 verbose url resolving [ 'https://registry.npmjs.org/', './bdb' ]
+22 verbose url resolved https://registry.npmjs.org/bdb
+23 info trying registry request attempt 1 at 11:29:28
+24 http GET https://registry.npmjs.org/bdb
+25 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+26 info trying registry request attempt 2 at 11:30:41
+27 http GET https://registry.npmjs.org/bdb
+28 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+29 info trying registry request attempt 3 at 11:32:44
+30 http GET https://registry.npmjs.org/bdb
+31 silly lockFile f9767e37-bdb bdb@
+32 silly lockFile f9767e37-bdb bdb@
+33 error Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+33 error     at ClientRequest.onError (/usr/local/lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/index.js:159:17)
+33 error     at ClientRequest.g (events.js:175:14)
+33 error     at ClientRequest.EventEmitter.emit (events.js:95:17)
+33 error     at CleartextStream.socketErrorListener (http.js:1528:9)
+33 error     at CleartextStream.EventEmitter.emit (events.js:95:17)
+33 error     at Socket.onerror (tls.js:1425:17)
+33 error     at Socket.EventEmitter.emit (events.js:117:20)
+33 error     at net.js:441:14
+33 error     at process._tickCallback (node.js:415:13)
+34 error If you need help, you may report this log at:
+34 error     <http://github.com/isaacs/npm/issues>
+34 error or email it to:
+34 error     <npm-@googlegroups.com>
+35 error System Linux 3.2.0-58-generic-pae
+36 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "bdb"
+37 error cwd /home/borussia/pollapp-webservice
+38 error node -v v0.10.15
+39 error npm -v 1.3.5
+40 error code ECONNRESET
+41 verbose exit [ 1, true ]

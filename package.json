@@ -1,0 +1,26 @@
+{
+  "name": "pollapp-webservice",
+  "version": "1.0.0",
+  "description": "Web Service para sistemas de votacoes online",
+  "main": "./bin/pollapp-webservice",
+  "dependencies": {
+    "restify": "~2.6.0",
+    "mysql": "*",
+    "datejs": "*",
+    "numeral": "*",
+    "node-diff": "*",
+    "hiredis": "*",
+    "redis": "*",
+    "html-entities": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://diasalexandres.com/pollapp-webservice"
+  },
+  "author": "Alexandre Dias",
+  "license": "Diascom Copyright"
+}

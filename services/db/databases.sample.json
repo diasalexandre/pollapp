@@ -1,0 +1,11 @@
+{
+    "mobile": {
+            "host": "localhost",
+            "user": "",
+            "password": "",
+            "database": "",
+            "charset": "UTF8",
+            "mobile": 1,
+    "label" : "pollapp"
+    }		
+}
