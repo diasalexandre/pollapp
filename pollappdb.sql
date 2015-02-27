@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (i686)
+-- MySQL dump 10.13  Distrib 5.5.40, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: pollappdb
+-- Host: localhost    Database: pollapp
 -- ------------------------------------------------------
--- Server version	5.5.35-0ubuntu0.12.04.2
+-- Server version	5.5.40-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,13 +27,18 @@ CREATE TABLE `candidatos` (
   `id_certame` int(11) NOT NULL,
   `candidato` varchar(512) DEFAULT NULL,
   PRIMARY KEY (`id_candidatos`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `candidatos`
 --
 
+LOCK TABLES `candidatos` WRITE;
+/*!40000 ALTER TABLE `candidatos` DISABLE KEYS */;
+INSERT INTO `candidatos` VALUES (1,1,'Ghiotto'),(2,1,'Na Lenha'),(3,1,'Mr Pizzo'),(4,1,'Splash');
+/*!40000 ALTER TABLE `candidatos` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `certames`
@@ -48,13 +53,18 @@ CREATE TABLE `certames` (
   `data` datetime DEFAULT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_certame`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `certames`
 --
 
+LOCK TABLES `certames` WRITE;
+/*!40000 ALTER TABLE `certames` DISABLE KEYS */;
+INSERT INTO `certames` VALUES (1,'Pizzaria','2015-02-28 00:00:00','2015-02-24 16:07:26');
+/*!40000 ALTER TABLE `certames` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `votos`
@@ -74,6 +84,11 @@ CREATE TABLE `votos` (
 -- Dumping data for table `votos`
 --
 
+LOCK TABLES `votos` WRITE;
+/*!40000 ALTER TABLE `votos` DISABLE KEYS */;
+INSERT INTO `votos` VALUES (2,1,'Alexandre Dias'),(2,1,'201.75.12.138'),(3,1,'Caio Pinheiro'),(2,1,'200.129.163.72');
+/*!40000 ALTER TABLE `votos` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -84,4 +99,4 @@ CREATE TABLE `votos` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-03-26 11:30:07
+-- Dump completed on 2015-02-26 21:45:45
