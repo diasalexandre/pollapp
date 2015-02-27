@@ -59,6 +59,7 @@ var getResponseFindCertames = function() {
 var getResponseFindResultado = function() {
     return {
         'total': 0,
+        'certame': "",
         'candidatos': [ ]
     };
 };
@@ -151,9 +152,10 @@ exports.findResultado = function(database, params, callback) {
         id = params.id,
     //cria a QUERY SQL para recuperar informações do banco de compilado_buscas
         selectBuscas = utils.sql({
-            'select': ['count(*) as total'],
+            'select': ['count(*) as total', 'certames.certame as nome'],
             'from': ['votos'],
-            'where': ['id_certame = {certame}'.replace('{certame}', id)]
+            'join': ['certames'],
+            'where': ['votos.id_certame = {certame}'.replace('{certame}', id)]
         });
     //chamada para o banco
     db.find(database, selectBuscas, function(err, result) {
@@ -164,6 +166,7 @@ exports.findResultado = function(database, params, callback) {
 
         result.forEach(function(elem) {
             response.total = elem.total;
+            response.certame = elem.nome;
         });
 
         var max = parseFloat(response.total, 10);
